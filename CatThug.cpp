@@ -1,3 +1,9 @@
+/**
+ * Title: CatThug.cpp
+ * Author: Jonathan Nazario
+ * Date: 06/16/2026
+ * Description: The Implementation of the CatThug class
+ */
 #include "CatThug.hpp"
 #include <vector>
 #include <iostream>

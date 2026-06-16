@@ -1,3 +1,9 @@
+/**
+ * Title: Firecat.hpp
+ * Author: Jonathan Nazario
+ * Date: 06/16/2026
+ * Description: The Declaration of the Firecat class
+ */
 #ifndef FIRECAT_H_
 #define FIRECAT_H_
 #include "Creature.hpp"

@@ -1,3 +1,9 @@
+/**
+ * Title: Firecat.cpp
+ * Author: Jonathan Nazario
+ * Date: 06/16/2026
+ * Description: The Implementation of the Firecat class
+ */
 #include "Firecat.hpp"
 #include <iostream>
 

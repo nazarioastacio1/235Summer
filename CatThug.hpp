@@ -1,3 +1,9 @@
+/**
+ * Title: CatThug.hpp
+ * Author: Jonathan Nazario
+ * Date: 06/16/2026
+ * Description: The Declaration of the CatThug class
+ */
 #ifndef CATTHUG_H_
 #define CATTHUG_H_
 #include "Creature.hpp"

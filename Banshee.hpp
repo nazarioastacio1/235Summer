@@ -1,3 +1,9 @@
+/**
+ * Title: Banshee.hpp
+ * Author: Jonathan Nazario
+ * Date: 06/16/2026
+ * Description: The Declaration of the Banshee class
+ */
 #ifndef BANSHEE_H_
 #define BANSHEE_H_
 

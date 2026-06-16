@@ -1,3 +1,9 @@
+/**
+ * Title: Banshee.cpp
+ * Author: Jonathan Nazario
+ * Date: 06/16/2026
+ * Description: The Implementation of the Banshee class
+ */
 #include "Banshee.hpp"
 #include <iostream>
 
