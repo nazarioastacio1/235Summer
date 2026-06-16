@@ -1,6 +1,7 @@
 #ifndef FIRECAT_H_
 #define FIRECAT_H_
 #include "Creature.hpp"
+#include <string>
 
 class Firecat : public Creature{
     public:
@@ -32,7 +33,7 @@ class Firecat : public Creature{
      *         if not provided, or if the value provided is 0 or negative
      * @param: A flag indicating whether the Firecat is an arsonist, with default value False
      */
-    Firecat(const std::string& name, Category category, School school, int health, int level, bool isHostile, FlameColor flameColor_, int flameIntensity, bool arsonist);
+    Firecat(const std::string& name, Category category = Category::ANIMAL, School school = School::FIRE, int health = 1, int level = 1, bool isHostile = false, FlameColor flameColor = ORANGE, int flameIntensity = 1, bool arsonist = false);
 
     /**
      * @param: The flame color of the Firecat (an enum)
