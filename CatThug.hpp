@@ -49,7 +49,7 @@ class CatThug : public Creature {
      * @param: The notoriety of the Cat Thug (a Notoriety enum) with default value ROOKIE
      * @param: A flag indicating whether the Cat Thug is wanted, with default value False
      */
-    CatThug(const std::string& name, Category category = Category::HUMANOID, School school = School::MYTH, int health = 1, int level = 1, bool isHostile = false, std::vector<Weapon> weapons = {}, Notoriety notoriety = ROOKIE, bool isWanted = false);
+    CatThug(const std::string& name, Category category = Category::HUMANOID, School school = School::MYTH, int health = 1, int level = 1, bool isHostile = false, std::vector<Weapon> weapons = {}, Notoriety notoriety = ROOKIE, bool isWanted = false, int speed = 1);
 
     /**
      * @param: The weapons of a Cat Thug

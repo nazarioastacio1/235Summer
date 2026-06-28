@@ -44,7 +44,7 @@ if not provided, or if the value provided is 0 or negative
 @param: A flag indicating whether the Banshee can induce fear, with
 default value False
 */
-Banshee::Banshee(const std::string& name, Creature::Category category, Creature::School school, int health, int level, bool isHostile, Aura spectralAura, int screamVolume, bool fearInducing) : Creature(name, category, school, health, level, isHostile){
+Banshee::Banshee(const std::string& name, Creature::Category category, Creature::School school, int health, int level, bool isHostile, Aura spectralAura, int screamVolume, bool fearInducing, int speed) : Creature(name, category, school, health, level, isHostile, speed){
        spectralAura_ = spectralAura;
        if (screamVolume <=0){
         screamVolume_ = 1;
@@ -140,6 +140,7 @@ void Banshee::display() const {
     std::cout << "Level: " << getLevel() << "\n";
     std::cout << "Fear Inducing: " << (fearInducing_ ? "TRUE" : "FALSE") << "\n";
     std::cout << "Hostile: " << (isHostile() ? "TRUE" : "FALSE") << "\n";
+    std::cout << "Speed: " << getSpeed() << std::endl;
 }
 
 /**

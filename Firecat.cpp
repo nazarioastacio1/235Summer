@@ -43,7 +43,7 @@ if not provided, or if the value provided is 0 or negative
 @param: A flag indicating whether the Firecat is an arsonist, with default
 value False
 */
-Firecat::Firecat(const std::string& name, Category category, School school, int health, int level, bool isHostile, FlameColor flameColor, int flameIntensity, bool arsonist) : Creature(name, category, school, health, level, isHostile){
+Firecat::Firecat(const std::string& name, Category category, School school, int health, int level, bool isHostile, FlameColor flameColor, int flameIntensity, bool arsonist, int speed) : Creature(name, category, school, health, level, isHostile, speed){
     flameColor_ = flameColor;
     if (flameIntensity <= 0){
         flameIntensity_ = 1;
@@ -135,7 +135,8 @@ void Firecat::display() const{
     std::cout << "Health: " << getHealth() << "\n";
     std::cout << "Level: " << getLevel() << "\n";
     std::cout << "Arsonist: " << (isArsonist() ? "TRUE" : "FALSE") << "\n";
-    std::cout << "Hostile: " << (isHostile() ? "TRUE" : "FALSE") << std::endl;
+    std::cout << "Hostile: " << (isHostile() ? "TRUE" : "FALSE") << "\n";
+    std::cout << "Speed: " << getSpeed() << std::endl;
 }
 
 /**

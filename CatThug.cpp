@@ -45,7 +45,7 @@ value ROOKIE
 @param: A flag indicating whether the Cat Thug is wanted, with default
 value False
 */
-CatThug::CatThug(const std::string& name, Category category, School school, int health, int level, bool isHostile, std::vector<Weapon> weapons, Notoriety notoriety, bool isWanted) : Creature(name, category, school, health, level, isHostile){
+CatThug::CatThug(const std::string& name, Category category, School school, int health, int level, bool isHostile, std::vector<Weapon> weapons, Notoriety notoriety, bool isWanted, int speed) : Creature(name, category, school, health, level, isHostile, speed){
     weapons_ = weapons;
     notorietyLevel_ = notoriety;
     isWanted_ = isWanted;
@@ -184,6 +184,7 @@ void CatThug::display() const{
     std::cout << "Level: " << getLevel() << "\n";
     std::cout << "Is Wanted: " << (isWanted_? "TRUE" : "FALSE") << "\n";
     std::cout << "Hostile: " << (isHostile()? "TRUE" : "FALSE") << "\n";
+    std::cout << "Speed: " << getSpeed() << "\n";
 }
 
 /**

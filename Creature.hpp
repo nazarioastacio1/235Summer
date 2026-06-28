@@ -40,7 +40,7 @@ class Creature {
      *               provided, or if the value provided is 0 or negative
      * @param tame: The hostility of the creature (a boolean) with default value of False
      */
-    Creature(const std::string& name, Category category = Category::CATEGORY_UNKNOWN , School school = School::SCHOOL_UNKNOWN, int health = 1, int level = 1, bool tame = false);
+    Creature(const std::string& name, Category category = Category::CATEGORY_UNKNOWN , School school = School::SCHOOL_UNKNOWN, int health = 1, int level = 1, bool tame = false, int speed = 1);
 
     /**
      * @param name: The name of the creature (a string)
@@ -106,6 +106,18 @@ class Creature {
     int getLevel() const;
 
     /**
+    @param: The speed of the creature
+    @post: Sets the speed to the given value if greater than 0, if not, do nothing
+    @return: true if speed was set, false otherwise
+    */
+    bool setSpeed(int speed);
+
+    /**
+    @return: The speed of the creature
+    */
+    int getSpeed() const;
+
+    /**
      * @param isHostile: A boolean value of whether or not the Creature is hostile
      * @post: Sets the isHostile flag to the value of the parameter
      */
@@ -134,6 +146,7 @@ class Creature {
     int health_;
     int level_;
     bool isHostile_;
+    int speed_;
 };
 
 #endif

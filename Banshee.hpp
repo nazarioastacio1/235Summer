@@ -39,7 +39,7 @@ class Banshee : public Creature{
      *         if not provided, or if the value provided is 0 or negative
      * @param: A flag indicating whether the Banshee can induce fear, with default value False
      */
-    Banshee(const std::string& name, Creature::Category category = Creature::Category::UNDEAD, Creature::School school = Creature::School::DEATH, int health = 1, int level = 1, bool isHostile = false, Aura spectralAura = RED, int screamVolume = 1, bool fearInducing = false);
+    Banshee(const std::string& name, Creature::Category category = Creature::Category::UNDEAD, Creature::School school = Creature::School::DEATH, int health = 1, int level = 1, bool isHostile = false, Aura spectralAura = RED, int screamVolume = 1, bool fearInducing = false, int speed = 1);
 
     /**
      * @param: The aura of the Banshee (an enum)

@@ -26,7 +26,7 @@ Creature::Creature(){
     health_ = 1;
     level_ = 1;
     isHostile_ = false;
-
+    speed_ = 1;
 };
 
 /**
@@ -40,7 +40,7 @@ Creature::Creature(){
  *               provided, or if the value provided is 0 or negative
  * @param tame: The hostility of the creature (a boolean) with default value of False
  */
-Creature::Creature(const std::string& name, Category category, School school, int health, int level, bool tame){
+Creature::Creature(const std::string& name, Category category, School school, int health, int level, bool tame, int speed){
     std::string upperName = name;
     for(int i = 0; i < upperName.length(); i++){
         upperName[i] = toupper(upperName[i]);
@@ -59,6 +59,11 @@ Creature::Creature(const std::string& name, Category category, School school, in
         level_ = level;
     };
     isHostile_ = tame;
+    if (speed <= 0){
+        speed_ = 1;
+    }else{
+        speed_ = speed;
+    }
 };
 
 /**
@@ -181,6 +186,27 @@ int Creature::getLevel()const{
 };
 
 /**
+@param: The speed of the creature
+@post: Sets the speed to the given value if greater than 0, if not, do nothing
+@return: true if speed was set, false otherwise
+*/
+bool Creature::setSpeed(int speed){
+    if (speed <=0){
+        return false;
+    }else{
+        speed_ = speed;
+        return true;
+    }
+}
+
+/**
+@return: The speed of the creature
+*/
+int Creature::getSpeed() const{
+    return speed_;
+}
+
+/**
  * @param isHostile: A boolean value of whether or not the Creature is hostile
  * @post: Sets the isHostile flag to the value of the parameter
  */
@@ -207,8 +233,9 @@ bool Creature::isHostile() const{
 void Creature::display() const{
     std::cout << name_ << "\n";
     std::cout <<"Category: " << getCategory() << "\n";
-    std:: cout <<"School: " << getSchool() << "\n"; 
-    std:: cout <<"Health: " << health_ << "\n";
-    std:: cout <<"Level: " << level_ << "\n";
-    std:: cout <<"Hostile: " << (isHostile_? "TRUE" : "FALSE") << "\n";   
+    std::cout <<"School: " << getSchool() << "\n"; 
+    std::cout <<"Health: " << health_ << "\n";
+    std::cout <<"Level: " << level_ << "\n";
+    std::cout <<"Hostile: " << (isHostile_? "TRUE" : "FALSE") << "\n"; 
+    std::cout << "Speed: " << getSpeed() << std::endl;  
 };

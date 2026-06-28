@@ -39,7 +39,7 @@ class Firecat : public Creature{
      *         if not provided, or if the value provided is 0 or negative
      * @param: A flag indicating whether the Firecat is an arsonist, with default value False
      */
-    Firecat(const std::string& name, Category category = Category::ANIMAL, School school = School::FIRE, int health = 1, int level = 1, bool isHostile = false, FlameColor flameColor = ORANGE, int flameIntensity = 1, bool arsonist = false);
+    Firecat(const std::string& name, Category category = Category::ANIMAL, School school = School::FIRE, int health = 1, int level = 1, bool isHostile = false, FlameColor flameColor = ORANGE, int flameIntensity = 1, bool arsonist = false, int speed = 1);
 
     /**
      * @param: The flame color of the Firecat (an enum)
