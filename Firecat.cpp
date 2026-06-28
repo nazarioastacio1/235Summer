@@ -93,7 +93,7 @@ bool Firecat::setFlameIntensity(const int& flameIntensity){
 /**
 @return: The flame intensity of the Firecat
 */
-int Firecat::getFlameItensity() const{
+int Firecat::getFlameIntensity() const{
     return flameIntensity_;
 }
 
@@ -131,7 +131,7 @@ void Firecat::display() const{
     std::cout << "Category: " << getCategory() << "\n";
     std::cout << "School: " << getSchool() << "\n";
     std::cout << "Flame Color: " << getFlameColor() << "\n";
-    std::cout << "Flame Intensity: " << getFlameItensity() << "\n";
+    std::cout << "Flame Intensity: " << getFlameIntensity() << "\n";
     std::cout << "Health: " << getHealth() << "\n";
     std::cout << "Level: " << getLevel() << "\n";
     std::cout << "Arsonist: " << (isArsonist() ? "TRUE" : "FALSE") << "\n";

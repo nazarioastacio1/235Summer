@@ -63,7 +63,7 @@ class Firecat : public Creature{
     /**
      * @return: The flame intensity of the Firecat
      */
-    int getFlameItensity() const;
+    int getFlameIntensity() const;
 
     /**
      * @param: A boolean value of whether or not the Firecat is an arsonist
