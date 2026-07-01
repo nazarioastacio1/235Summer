@@ -6,6 +6,7 @@
  */
 #include "Banshee.hpp"
 #include <iostream>
+#include "Wizard.hpp"
 
 /**
 Default constructor.
@@ -141,6 +142,18 @@ void Banshee::display() const {
     std::cout << "Fear Inducing: " << (fearInducing_ ? "TRUE" : "FALSE") << "\n";
     std::cout << "Hostile: " << (isHostile() ? "TRUE" : "FALSE") << "\n";
     std::cout << "Speed: " << getSpeed() << std::endl;
+}
+
+/**
+@param: A pointer to the wizard
+@post: Performs an attack that reduces the Wizard's health by 10
+This attack can be anything that you want, get creative with it and print out
+the message of your attack in a similar fashion to the message printed out for
+the wizard's attack spell
+*/
+void Banshee::attack(Wizard* wizard) const{
+    wizard->setHealth(wizard->getHealth() - 10);
+    std::cout << getName() << " lets out a piercing wail at " << wizard->getName() << "!\n";
 }
 
 /**

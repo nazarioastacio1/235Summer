@@ -8,6 +8,7 @@
 #define CATTHUG_H_
 #include "Creature.hpp"
 #include <vector>
+#include "Wizard.hpp"
 
 class CatThug : public Creature {
     public:
@@ -111,6 +112,15 @@ class CatThug : public Creature {
      * Is Wanted: [TRUE/FALSE]\n Hostile: [TRUE/FALSE]"
      */
     void display() const;
+
+    /**
+    @param: A pointer to the wizard
+    @post: Performs an attack that reduces the Wizard's health by 10
+    This attack can be anything that you want, get creative with it and print out
+    the message of your attack in a similar fashion to the message printed out for
+    the wizard's attack spell
+    */
+    void attack(Wizard* wizard) const;
 
     /**
      * @post: Checks to see if two cat thugs are equal

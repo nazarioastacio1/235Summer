@@ -7,6 +7,7 @@
 #include "CatThug.hpp"
 #include <vector>
 #include <iostream>
+#include "Wizard.hpp"
 
 /**
 Default constructor.
@@ -185,6 +186,18 @@ void CatThug::display() const{
     std::cout << "Is Wanted: " << (isWanted_? "TRUE" : "FALSE") << "\n";
     std::cout << "Hostile: " << (isHostile()? "TRUE" : "FALSE") << "\n";
     std::cout << "Speed: " << getSpeed() << "\n";
+}
+
+/**
+@param: A pointer to the wizard
+@post: Performs an attack that reduces the Wizard's health by 10
+This attack can be anything that you want, get creative with it and print out
+the message of your attack in a similar fashion to the message printed out for
+the wizard's attack spell
+*/
+void CatThug::attack(Wizard* wizard) const{
+    wizard->setHealth(wizard->getHealth() - 10);
+    std::cout << getName() << " smashes " << wizard->getName() << " with a Baseball bat" << "!\n";
 }
 
 /**

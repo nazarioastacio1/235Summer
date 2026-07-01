@@ -10,6 +10,7 @@
 #include "MagicalBag.hpp"
 #include "Creature.hpp"
 #include <string>
+#include <vector>
 
 class Tavern : public MagicalBag<Creature*> {
     public:
@@ -131,6 +132,14 @@ class Tavern : public MagicalBag<Creature*> {
         @post: For every creature in the tavern, display each creature's information
         */
         void displayCreatures() const;
+
+        /**
+        @return: A vector of all Creature pointers currently in the tavern
+        This should make your indexing easier when it comes to the actual battle
+        simulation. If you feel like this is unnecessary for the battle simulation, feel
+        free to not use this
+        */
+        std::vector<Creature*> getAllCreatures() const;
 
     private:
         int totalLevel_;

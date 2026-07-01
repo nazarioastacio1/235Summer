@@ -244,3 +244,17 @@ void Tavern::displayCreatures() const{
         items_[i]->display();
     }
 }
+
+/**
+@return: A vector of all Creature pointers currently in the tavern
+This should make your indexing easier when it comes to the actual battle
+simulation. If you feel like this is unnecessary for the battle simulation, feel
+free to not use this
+*/
+std::vector <Creature*> Tavern::getAllCreatures() const{
+    std::vector<Creature*> creatures;
+    for (int i =0; i < item_count_; i++){
+        creatures.push_back(items_[i]);
+    }
+    return creatures;
+}

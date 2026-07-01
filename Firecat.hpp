@@ -8,6 +8,7 @@
 #define FIRECAT_H_
 #include "Creature.hpp"
 #include <string>
+#include "Wizard.hpp"
 
 class Firecat : public Creature{
     public:
@@ -91,6 +92,15 @@ class Firecat : public Creature{
      * Hostile: [TRUE/FALSE]"
      */
     void display() const;
+
+    /**
+    @param: A pointer to the wizard
+    @post: Performs an attack that reduces the Wizard's health by 10
+    This attack can be anything that you want, get creative with it and print out
+    the message of your attack in a similar fashion to the message printed out for
+    the wizard's attack spell
+    */
+    void attack(Wizard* wizard) const;
 
     /**
      * @post: Checks to see if two firecats are equal

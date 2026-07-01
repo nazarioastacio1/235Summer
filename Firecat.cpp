@@ -6,6 +6,7 @@
  */
 #include "Firecat.hpp"
 #include <iostream>
+#include "Wizard.hpp"
 
 /**
 Default constructor.
@@ -139,6 +140,17 @@ void Firecat::display() const{
     std::cout << "Speed: " << getSpeed() << std::endl;
 }
 
+/**
+@param: A pointer to the wizard
+@post: Performs an attack that reduces the Wizard's health by 10
+This attack can be anything that you want, get creative with it and print out
+the message of your attack in a similar fashion to the message printed out for
+the wizard's attack spell
+*/
+void Firecat::attack(Wizard* wizard) const{
+    wizard->setHealth(wizard->getHealth() - 10);
+    std::cout << getName() << " burned down this poor guy " << wizard->getName() << "!\n";
+}
 /**
 @post: Checks to see if two firecats are equal
 @post: Checks names, flame color, and if they are both arsonists
